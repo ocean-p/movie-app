@@ -7,8 +7,8 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchAsyncMovies())
-    dispatch(fetchAsyncShows())
+    dispatch(fetchAsyncMovies(movies))
+    dispatch(fetchAsyncShows(shows))
   }, [dispatch])
 
   return (
@@ -18,5 +18,8 @@ const Home = () => {
     </div>
   )
 }
+
+const movies = 'Demon Slayer';
+const shows = 'Conan';
 
 export default Home
